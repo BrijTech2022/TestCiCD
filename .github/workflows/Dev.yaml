@@ -13,7 +13,11 @@ jobs:
 
         - name: Setup dotnet
           uses: actions/setup-dotnet@v3
+        - name: Setup MSBuild
+          uses: microsoft/setup-msbuild@v1
 
+        - name: Setup NuGet
+          uses: NuGet/setup-nuget@v1.0.5
         - name: Deploy
           working-directory: C:\actions-runner\_work\TestCiCD\TestCiCD\TestWeb
           run: dotnet publish --self-contained -r win-x64 -c Release
