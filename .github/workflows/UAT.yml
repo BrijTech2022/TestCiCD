@@ -1,4 +1,4 @@
-name: CICD DEV
+name: CICD UAT
 on:
   workflow_dispatch:  
   push:
