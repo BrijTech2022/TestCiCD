@@ -4,7 +4,7 @@ on:
     branches: DEV
 jobs:
     build:
-       runs-on: windows-latest
+       runs-on: DEVRunner
        steps:
         - name: checkout code
           uses: actions/checkout@v3
