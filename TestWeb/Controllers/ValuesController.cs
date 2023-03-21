@@ -20,7 +20,7 @@ namespace TestWeb.Controllers
         [HttpGet("{id}")]
         public string Get(int id)
         {
-            return "Kiezen softech Pvt ltd.";
+            return "Kiezen softtech";
         }
 
         // POST api/values
