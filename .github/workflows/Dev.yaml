@@ -1,6 +1,6 @@
 name: CICD DEV
 on:
-   push:
+  push:
     branches: DEV
 jobs:
     build:
