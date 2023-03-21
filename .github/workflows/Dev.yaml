@@ -17,7 +17,7 @@ on:
        - name: nuget restore
          run: dotnet restore
         - name: Build Web
-            working-directory: C:\actions-runner-stiv3\_work\STI-v3\STI-v3\SecuritiesTrackerV3\GUI\SecuritiesTrackerV3\SecuritiesTrackerV3.Web
+            working-directory: C:\actions-runner\_work\TestWeb.sln
             run: dotnet publish --self-contained -r win-x64 -c Release
 
 
