@@ -1,0 +1,22 @@
+name: CICD DEV
+on:
+  workflow_dispatch:  
+  push:
+    branches: main
+
+jobs:
+    build:
+       runs-on: UATRunner
+       steps:
+        - name: checkout code
+          uses: actions/checkout@v3
+
+        - name: Setup dotnet
+          uses: actions/setup-dotnet@v3
+       
+
+        - name: Setup NuGet
+          uses: NuGet/setup-nuget@v1.0.5
+        - name: Deploy
+          working-directory: C:\actions-runner2\_work\TestCiCD\TestCiCD\TestWeb
+          run: dotnet publish --self-contained -r win-x64 -c Release
