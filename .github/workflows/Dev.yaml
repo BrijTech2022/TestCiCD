@@ -1,6 +1,6 @@
 name: CICD DEV
 on:
-   workflow_dispatch:  
+  
    push:
     branches: DEV
 jobs:
