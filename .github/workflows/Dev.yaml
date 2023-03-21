@@ -1,24 +1,17 @@
-name:CICD DEV
-
+name: CICD DEV
 on:
-  push:
-   branches: DEV
-   jobs:
-     build:
+    push:
+     branches: DEV
+jobs:
+    build:
        runs-on: windows-latest
-     steps:
+       steps:
         - name: checkout code
           uses: actions/checkout@v3
 
         - name: Setup dotnet
-           uses: actions/setup-dotnet@v3
-     with:
-       dotnet-version: '5.0.x'  
-       - name: nuget restore
-         run: dotnet restore
-        - name: Build Web
-            working-directory: C:\actions-runner\_work\TestWeb.sln
-            run: dotnet publish --self-contained -r win-x64 -c Release
+          uses: actions/setup-dotnet@v3
 
-
-   
+        - name: Deploy
+          working-directory: C:\actions-runner\_work\TestWeb.sln 
+          run: dotnet publish --self-contained -r win-x64 -c Release
